@@ -1,0 +1,1 @@
+<h1>HUTCHINS BOT<sub><sub>1.0.0v</sub><sub><sub><h6>Made By Jonell Magallanes</h6></sub></sub></sub></h1>

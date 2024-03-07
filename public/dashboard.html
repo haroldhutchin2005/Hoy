@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+    }
+
+    .header {
+      background-color: #3b5998;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .file-manager {
+      margin: 20px;
+    }
+
+    #fileList {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #fileList li {
+      margin: 5px 0;
+    }
+
+    form {
+      margin-top: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+
+    button {
+      padding: 8px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+
+    .logout {
+      display: block;
+      margin-top: 20px;
+      background-color: #ed3b3b;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Dashboard</h1>
+    <p>Welcome to the dashboard, ${user.username}!</p>
+  </div>
+
+  <div class="file-manager">
+    <h2>File Manager</h2>
+    <ul id="fileList"></ul>
+
+    <form action="/open-file" method="post">
+      <label for="fileName">Enter file name to open:</label>
+      <input type="text" id="fileName" name="fileName" required>
+      <button type="submit">Open File</button>
+    </form>
+
+    <!-- Add forms for editing and downloading files -->
+
+    <a href="/logout" class="logout">Logout</a>
+  </div>
+
+  <script src="/scripts.js"></script>
+</body>
+</html>
